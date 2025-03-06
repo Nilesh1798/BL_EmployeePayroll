@@ -39,6 +39,7 @@ public class UserController {
         return userRepository.findById(id).map(user -> {
             user.setName(updatedUser.getName());
             user.setEmail(updatedUser.getEmail());
+            user.setEmail(updatedUser.getSalary());
             return userRepository.save(user);
         }).orElseThrow(() -> new RuntimeException("User not found"));
     }
