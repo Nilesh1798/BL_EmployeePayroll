@@ -3,6 +3,7 @@ package com.example.EmployeePayroll.service;
 import com.example.EmployeePayroll.dto.EmployeeDTO;
 import com.example.EmployeePayroll.model.User;
 import com.example.EmployeePayroll.repository.UserRepository;
+import com.example.EmployeePayroll.service.Interface.IEmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 //services added
 @Service
-public class EmployeeService {
+public class EmployeeService implements IEmployeeService {
 
     @Autowired
     private UserRepository userRepository;
